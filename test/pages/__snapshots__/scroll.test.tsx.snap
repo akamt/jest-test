@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Scroll page matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="h-screen w-screen"
+  >
+    <nav
+      class="flex h-16 justify-center"
+    >
+      <a>
+        Section1
+      </a>
+    </nav>
+    <section
+      class="h-1/2 flex justify-center items-center"
+    >
+      50% height section
+    </section>
+    <section
+      class="h-full flex justify-center items-center"
+      id="section1"
+    >
+      section1!!
+    </section>
+  </div>
+</DocumentFragment>
+`;

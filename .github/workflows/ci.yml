@@ -1,0 +1,11 @@
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup repo
+        uses: actions/checkout@v2
+      - name: Install modules
+        run: yarn install
+      - name: Run tests
+        run: yarn run test-all

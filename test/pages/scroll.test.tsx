@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from '../testUtils'
-import ScrollPage from '../../pages/scroll'
+import ScrollPage from '../../src/pages/scroll'
 
 describe('Scroll page', () => {
   it('matches snapshot', () => {

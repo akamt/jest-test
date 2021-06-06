@@ -4,7 +4,7 @@ import TodoListStats from '../components/todoStats'
 import TodoListFilter, { filteredTodoListState } from '../components/todoFilter'
 import TodoItemCreator from '../components/todoCreater'
 
-const TodoList = () => {
+const TodoListPage = (): JSX.Element => {
   const todoList = useRecoilValue(filteredTodoListState)
 
   return (
@@ -20,4 +20,4 @@ const TodoList = () => {
   )
 }
 
-export default TodoList
+export default TodoListPage

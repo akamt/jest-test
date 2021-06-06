@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { useRecoilValue } from 'recoil'
 import TodoItem from '../components/todoItem'
 import TodoListStats from '../components/todoStats'
@@ -9,6 +10,11 @@ const TodoListPage = (): JSX.Element => {
 
   return (
     <div>
+      <Head>
+        <title>Todo List</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <TodoListStats />
       <TodoListFilter />
       <TodoItemCreator />

@@ -1,12 +1,8 @@
 import { useState } from 'react'
-import {
-  useRecoilValue,
-  useSetRecoilState,
-  selector,
-  useRecoilState,
-} from 'recoil'
+import { useRecoilValue, useSetRecoilState, selector } from 'recoil'
 import TodoItem from '../components/todoItem'
 import TodoListStats from '../components/todoStats'
+import TodoListFilter from '../components/todoFilter'
 import { todoListState, todoListFilterState } from '../atoms/todo'
 
 const TodoList = () => {
@@ -15,7 +11,7 @@ const TodoList = () => {
   return (
     <div>
       <TodoListStats />
-      <TodoListFilters />
+      <TodoListFilter />
       <TodoItemCreator />
 
       {todoList.map((todoItem) => (
@@ -56,25 +52,6 @@ const TodoItemCreator = () => {
 let id = 0
 function getId() {
   return id++
-}
-
-const TodoListFilters = () => {
-  const [filter, setFilter] = useRecoilState(todoListFilterState)
-
-  const updateFilter = ({ target: { value } }) => {
-    setFilter(value)
-  }
-
-  return (
-    <>
-      Filter:
-      <select value={filter} onChange={updateFilter}>
-        <option value="Show All">All</option>
-        <option value="Show Completed">Completed</option>
-        <option value="Show Uncompleted">Uncompleted</option>
-      </select>
-    </>
-  )
 }
 
 const filteredTodoListState = selector({

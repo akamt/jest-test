@@ -37,12 +37,15 @@ const Component: React.FC<Props> = ({
   totalUncompletedNum,
   formattedPercentCompleted,
 }) => (
-  <ul>
-    <li>Total items: {totalNum}</li>
-    <li>Items completed: {totalCompletedNum}</li>
-    <li>Items not completed: {totalUncompletedNum}</li>
-    <li>Percent completed: {formattedPercentCompleted}</li>
-  </ul>
+  <div className="flex my-2 flex-col">
+    <h3 className="text-lg mb-1">Todo stats</h3>
+    <ul className="list-inside list-disc">
+      <li>Total items: {totalNum}</li>
+      <li>Items completed: {totalCompletedNum}</li>
+      <li>Items not completed: {totalUncompletedNum}</li>
+      <li>Percent completed: {formattedPercentCompleted}</li>
+    </ul>
+  </div>
 )
 
 const TodoListStatsContainer: React.FC<ContainerProps> = () => {

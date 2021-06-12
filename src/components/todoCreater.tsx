@@ -5,7 +5,7 @@ import { todoListState } from '../atoms/todo'
 type Props = {
   inputValue: string
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
-  addItem: () => void
+  addItem: (event: React.MouseEvent<HTMLInputElement>) => void
 }
 
 // utility for creating unique Id
